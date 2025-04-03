@@ -76,6 +76,7 @@ function reverseArray(arr) {
 
 // Example usage:
 const reversedNumbers = reverseArray(numbers);
+
 console.log(`The reversed array is: ${reversedNumbers}`); // Output: The reversed array is: [1, 8, 2, 7, 5, 3]
 
 // Qustion 6: Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
@@ -106,4 +107,34 @@ const uniqueNumsArray = [...uniqueNumsSet];
 // Output the array with duplicates removed
 console.log(uniqueNumsArray);
 
+//Question 8: How do you find the sum of all numbers in an array in JavaScript?
 
+function findSum(arr) {
+    return arr.reduce((sum, num) => sum + num, 0);
+}
+
+
+const numbers = [3, 5, 7, 2, 8, 1];
+const totalSum = findSum(numbers);
+console.log(`The sum of all numbers is: ${totalSum}`);
+
+//Question 9: How do you find the second largest number in an array in JavaScript?
+
+function findSecondLargest(arr) {
+    if (arr.length < 2) return null;
+    let largest = -Infinity, secondLargest = -Infinity;
+    
+    for (let num of arr) {
+        if (num > largest) {
+            secondLargest = largest;
+            largest = num;
+        } else if (num > secondLargest && num !== largest) {
+            secondLargest = num;
+        }
+    }
+    return secondLargest;
+}
+
+const numbers = [3, 5, 7, 2, 8, 1];
+const secondLargestNumber = findSecondLargest(numbers);
+console.log(`The second largest number is: ${secondLargestNumber}`);
