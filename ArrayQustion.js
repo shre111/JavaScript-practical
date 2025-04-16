@@ -139,9 +139,3 @@ function findSecondLargest(arr) {
 const numbers = [3, 5, 7, 2, 8, 1];
 const secondLargestNumber = findSecondLargest(numbers);
 console.log(`The second largest number is: ${secondLargestNumber}`);
-
-
-
-
-
-
